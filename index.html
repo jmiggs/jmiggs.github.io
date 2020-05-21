@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+  <title>NumWarrior</title>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+  <link rel='stylesheet' href='reset.css'>
+  <link rel='stylesheet' href='style.css'>
+  <script type="text/javascript" src="./dist/main.js" charset="utf-8" defer></script>
+</head>
+
+<body> 
+  <div class="bg">
+    <div class="left">
+      <div class="how-to">How to play:</div>
+      <div class="instructions">
+        press the number to move to next tile
+        <br/>
+        <br/>
+        press enter to kill the evil piggies
+      </div>
+    </div>
+    
+    <div class="mid">
+      <img class="numtitle" src="./assets/numwarriortitle.png">
+      <div class="game-container">
+        <div id="enter">Press Space to Play</div>
+        <canvas id="game" height="450" width="450"></canvas>
+      </div>
+    </div>
+    
+    <div class="right">
+      <div class="score">Score: <div id="score-num">0</div></div>
+      <div class="time">Time: <div id="time-num">1:00</div></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
