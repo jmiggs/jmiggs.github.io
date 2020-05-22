@@ -1,6 +1,7 @@
 import Board from './board';
 import Player from './player';
 import ObjController from './obj_controller'
+import AudioController from './aud_controller';
 import { parse } from 'querystring';
 
 export default class NumWarrior {
@@ -8,8 +9,10 @@ export default class NumWarrior {
     this.context = canvas.getContext('2d');
     this.dimensions = { width: canvas.width, height: canvas.height };
     this.board = new Board(this.dimensions);
-    this.objController = new ObjController(this.board, this.context);
+    this.audio = new AudioController(this);
+    this.objController = new ObjController(this.board, this.audio);
     this.player = new Player(this.board, this.context, this.objController, this);
+
     this.frameCount = 0;
     this.status = 'none';
 
@@ -22,6 +25,12 @@ export default class NumWarrior {
     this.run = this.run.bind(this);
     this.drawGameOver = this.drawGameOver.bind(this);
     
+  }
+
+  start() {
+
+    this.audio.startBgm();
+    this.run();
   }
   
   run(c) {
@@ -54,6 +63,7 @@ export default class NumWarrior {
   handleKeyDown(e) {
 
     if (e.key === 'Enter') {
+
       this.player.attacking = true;
       this.player.attack(e);
     }
@@ -82,14 +92,13 @@ export default class NumWarrior {
 
       if (this.minute === `0` && this.seconds === `00`) {
         this.gameOver();
-        console.log('gameover')
       }
-
+      
     }, 1000)
   }
-
+  
   drawGameOver() {
-
+    
     if (this.status === 'done') {
       this.drawUI();
       this.context.clearRect(0,0, this.dimensions.width, this.dimensions.height);
@@ -97,18 +106,25 @@ export default class NumWarrior {
       this.board.drawBoard(this.context);
     }
   }
-
+  
   gameOver() {
+
+    this.status = 'done';
+
+
     this.minute = `0`;
     this.seconds = `00`;
     this.frameCount = 0;
     
     clearInterval(this.timer);
-    this.status = 'done';
+    this.audio.stopBgm();
+    this.audio.playGameover();
     this.drawGameOver();
-    document.getElementById('enter').style.display = 'block';
 
     window.removeEventListener('keydown', this.handleKeyDown.bind(this));
+    this.audio.removeListeners();
+    document.getElementById('enter').style.display = 'block';
+
 
   }
   

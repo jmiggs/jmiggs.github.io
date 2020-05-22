@@ -1,7 +1,7 @@
 import ObjController from './obj_controller';
 
 export default class Pigs {
-  constructor(board, gridX, gridY, controller) {
+  constructor(board, gridX, gridY, objController) {
     // this.board = board;
     // this.ctx = ctx;
     this.posOffX = 20;
@@ -11,7 +11,7 @@ export default class Pigs {
     this.pos = [gridX, gridY]
     this.frame = 0;
     this.scale = board.tsize;
-    this.objController = controller;
+    this.objController = objController;
     this.size = 55;
   
     this.hit = false;
@@ -71,11 +71,9 @@ export default class Pigs {
         this.drawDeath(ctx, loop[this.deathFrame] );
         this.deathFrame += 1;
         if (this.deathFrame > 5) {
-          console.log('hit')
           this.deathFrame = 0;
           this.objController.removePig(this);
           this.death = false;
-        
         }
       } 
     } else {

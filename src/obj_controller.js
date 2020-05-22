@@ -2,8 +2,9 @@ import Pig from './pig'
 
 
 export default class ObjController {
-  constructor(board, ctx) {
+  constructor(board, audController) {
     this.board = board;
+    this.audio = audController;
     this.pigs = [];
     this.maxPigs = 4;
     this.status = false;
@@ -40,8 +41,8 @@ export default class ObjController {
       let currPigPos = this.pigs[i].pos;
 
       if (currPigPos[0] === pig.pos[0] && currPigPos[1] === pig.pos[1]) {
-        // console.log('hit')
         this.pigs.splice(i, 1);
+        this.audio.pigDeathSound();
         if (this.pigs.length === 1) {
           this.generatePigs();
         }
@@ -49,8 +50,5 @@ export default class ObjController {
       }
     }
   }
-
-
-
 
 }
