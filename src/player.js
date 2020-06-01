@@ -140,8 +140,8 @@ export default class Player {
     if (move === 'down') {
       this.posy += this.vel;
       return true;
-
     }
+    
     if (move === 'left') {
       this.posx -= this.vel;
       return true;
@@ -151,7 +151,6 @@ export default class Player {
       this.posx += this.vel;
       return true;
     }
-
   }
 
 }

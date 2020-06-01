@@ -112,5 +112,34 @@
   font-family: '8BITWONDERNominal';
 }
 
+#music-buttons {
+  padding-top: 15px;
+}
+
+.fas {
+  padding-right: 10px;
+  font-size: 2em;
+  color: black;
+}
+
+.fab {
+  padding-right: 10px;
+  font-size: 2.3em;
+  color: black;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
+
+.fab:hover {
+  cursor: pointer;
+}
+
+.links {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
 
 
