@@ -4,6 +4,8 @@ import ObjController from './obj_controller'
 import AudioController from './aud_controller';
 import { parse } from 'querystring';
 
+const SAVE_KEY_SCORE = "highscore";
+
 export default class NumWarrior {
   constructor(canvas) {
     this.context = canvas.getContext('2d');
@@ -19,7 +21,8 @@ export default class NumWarrior {
     this.minute = `1`;
     this.seconds = `00`;
     this.timer;
-    this.score = `0`
+    this.score = `0`;
+    this.hiscore = '0';
 
 
     this.run = this.run.bind(this);
@@ -30,6 +33,7 @@ export default class NumWarrior {
   start() {
 
     this.audio.startBgm();
+    
     this.run();
   }
   
@@ -63,7 +67,6 @@ export default class NumWarrior {
   handleKeyDown(e) {
 
     if (e.key === 'Enter') {
-
       this.player.attacking = true;
       this.player.attack(e);
     }
@@ -76,8 +79,7 @@ export default class NumWarrior {
     this.timer = setInterval( () => {
       if (this.minute === `1` && this.seconds === `00`) {
         
-        this.minute = `0`
-
+        this.minute = `0`;
         this.seconds = `59`;
       } else {
 
@@ -111,7 +113,6 @@ export default class NumWarrior {
 
     this.status = 'done';
 
-
     this.minute = `0`;
     this.seconds = `00`;
     this.frameCount = 0;
@@ -126,16 +127,26 @@ export default class NumWarrior {
     document.getElementById('enter').style.display = 'block';
 
 
+
   }
   
   drawUI() {
     document.getElementById('time-num').innerHTML = `${this.minute}:${this.seconds}`;
     document.getElementById('score-num').innerHTML = this.score;
+ 
   }
 
   addScore() {
     let newScore = parseInt(this.score, 10) + 100;
     this.score = newScore.toString();
+
+    let currHiscore = document.getElementById('hiscore-num').innerHTML;
+
+    if (newScore > currHiscore) {
+      localStorage.setItem(SAVE_KEY_SCORE, newScore);
+      document.getElementById('hiscore-num').innerHTML = newScore;
+    }
+
   }
 
 }

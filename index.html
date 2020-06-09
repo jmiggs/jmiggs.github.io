@@ -2,12 +2,13 @@
 
 <head>
   <title>NumWarrior</title>
+  <!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Judson:400,700" rel="stylesheet">
   <script src="https://kit.fontawesome.com/261a400a7d.js" crossorigin="anonymous"></script>
   <link rel='stylesheet' href='reset.css'>
   <link rel='stylesheet' href='style.css'>
   <script type="text/javascript" src="./dist/main.js" charset="utf-8" defer></script>
   <link rel="icon" type="image/png" href="./assets/favicon32.png"/>
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
   
 </head>
 
@@ -19,34 +20,55 @@
 
   <div class="bg">
     <div class="left">
-      <div class="how-to">How to play:</div>
-      <div class="instructions">
-        press the number next to the hero to move to next tile
-        <br/>
-        <br/>
-        press enter to kill the evil piggies
-      </div>
-      <div class='links'>
-        <a href="https://github.com/jmiggs/NumWarrior" ><i class="fab fa-github-square"></i> </a>
-        <a href="https://www.linkedin.com/in/jdelacruzm/" ><i class="fab fa-linkedin"></i> </a>
+      <div class=left-cont >
+        <div class="how-to">About</div>
+        <div class="instructions">
+          This game is to practice typing numbers into a 10-key numpad, or onto a regular keyboard, too.
+          <br/>
+          <br/>
+          <p>
+          Each round is one minute. 
+          <br/>
+          To move, press the number on the tile next to the hero to move to that tile.
+          <br/>
+          Navigate your way to tiles containing evil alien pigs, and press ENTER to slay them for points.
+          </br>
+          </br>
+          See how many points you can get in one minute!
+          </p>
+          <br/>
+        </div>
+        <div class='links'>
+          <a href="https://github.com/jmiggs/NumWarrior" ><i class="fab fa-github-square"></i> </a>
+          <a href="https://www.linkedin.com/in/jdelacruzm/" ><i class="fab fa-linkedin"></i> </a>
+        </div>
       </div>
     </div>
     
     <div class="mid">
       <img class="numtitle" src="./assets/numwarriortitle.png">
-      <div class="game-container">
+      <div class="game-container" height="450" width="450">
         <div id="enter">Press Space to Play</div>
         <canvas id="game" height="450" width="450"></canvas>
       </div>
     </div>
     
     <div class="right">
-      <div class="score">Score: <div id="score-num">0</div></div>
-      <div class="time">Time: <div id="time-num">1:00</div></div>
-      <div id="music-buttons"> 
-        <i class="fas fa-volume-up" id="play"></i>
-        <i class="fas fa-volume-mute" id=pause></i>
+      <div class="right-cont">
+        <div class="score">Score: <div id="score-num">0</div></div>
+        <div class="time">Time: <div id="time-num">1:00</div></div>
+        <div id="music-buttons"> 
+          <i class="fas fa-volume-up" id="play"></i>
+          <i class="fas fa-volume-mute" id=pause></i>
+        </div>
       </div>
+
+      <div class="right-hiscore">
+        <div class="hiscore-cont">
+          Best: <div id="hiscore-num"></div>
+        </div>
+      </div>
+      
     </div>
   </div>
 
