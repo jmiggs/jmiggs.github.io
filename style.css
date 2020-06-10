@@ -66,15 +66,15 @@ body {
   font-size: 1.75em;
   padding-bottom: 15px;
   color: rgb(229, 208, 18);
-  padding-left: 15px;
-  padding-top: 5px;;
+  padding-left: 10px;
+  padding-top: 10px;;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .instructions {
   /* font-family: '8BITWONDERNominal'; */
-  font-size: .85em;
-  padding-left: 15px;
+  font-size: .95em;
+  padding-left: 10px;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   line-height: normal;
@@ -166,7 +166,7 @@ body {
 }
 
 .links {
-  padding-top: 80px;
+  padding-top: 60px;
   padding-left: 15px;
   color: white;
 }
