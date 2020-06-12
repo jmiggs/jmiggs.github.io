@@ -59,12 +59,12 @@ export default class Player {
       }
     } else {
     
-    if (this.frame > 10) {
-      this.frame = 0;
+      if (this.frame > 10) {
+        this.frame = 0;
+      }
+      this.drawFrame(ctx, loop[this.frame]);
+      this.frame += 1;
     }
-    this.drawFrame(ctx, loop[this.frame]);
-    this.frame += 1;
-  }
   }
 
   move(e) {

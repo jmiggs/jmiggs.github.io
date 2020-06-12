@@ -1,7 +1,14 @@
 body {
-  font-family: 'Judson', serif;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  background-image: url('./assets/bg2.jpg') ;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100vw; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #game {
@@ -33,20 +40,17 @@ body {
 }
 
 .bg {
-  background-image: url('./assets/bg2.jpg') ;
-  background-size: 100% 100%;
-  height: 100%;
-  width: 100vw;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+
 }
 
 .left {
   /* margin-top: 300px; */
   width: 375px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -54,16 +58,24 @@ body {
 }
 
 .left-cont {
-  margin-top: 150px;
+  margin-top: 125px;
   background-color: rgb(107, 59, 24);
   border: 5px solid rgb(107, 59, 24);
   border-radius: 5px;
-  height: 350px;
+  height: 260px;
+}
+
+.left-cont2 {
+  margin-top: 20px;
+  background-color: rgb(107, 59, 24);
+  border: 5px solid rgb(107, 59, 24);
+  border-radius: 5px;
+  height: 175px;
 }
 
 .how-to {
   /* font-family: '8BITWONDERNominal'; */
-  font-size: 1.75em;
+  font-size: 1.5em;
   padding-bottom: 15px;
   color: rgb(229, 208, 18);
   padding-left: 10px;
@@ -75,6 +87,7 @@ body {
   /* font-family: '8BITWONDERNominal'; */
   font-size: .95em;
   padding-left: 10px;
+  padding-right: 10px;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   line-height: normal;
@@ -85,12 +98,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 500px;
-  height: 100%;
+  height: 100vh;
 }
 
 .right {
   width: 375px;
-  height: 100%;
+  height: 100vh;
   justify-content: start;
   display: flex;
   flex-direction: column;
@@ -99,7 +112,7 @@ body {
 .right-cont {
   background-color: rgb(107, 59, 24);
   border: 5px solid rgb(107, 59, 24);
-  margin-top: 150px;
+
   border-radius: 5px;
   width: 250px;
   /* display: flex;
@@ -108,7 +121,8 @@ body {
   align-items: center; */
   padding-bottom: 10px;
   padding-top: 10px;
-  padding-left: 10px;;
+  padding-left: 10px;
+  margin-top: 125px;
 }
 
 .score {
@@ -147,7 +161,7 @@ body {
 
 .fas {
   padding-right: 10px;
-  font-size: 2em;
+  font-size: 2.3em;
   color: white;
 }
 
@@ -165,11 +179,7 @@ body {
   cursor: pointer;
 }
 
-.links {
-  padding-top: 60px;
-  padding-left: 15px;
-  color: white;
-}
+
 
 .right-hiscore {
   margin-top: 20px;
@@ -196,6 +206,52 @@ body {
 #hiscore-num {
   color: white;
 }
+
+.links {
+  background-color: rgb(107, 59, 24);
+  border: 5px solid rgb(107, 59, 24);
+  width: 260px;
+  height: 60px;
+  margin-top: 30px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about2 {
+  font-size: 1.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: white
+}
+
+.question-icon:hover .about-cont {
+  display: block
+}
+
+.about-cont {
+  display: none;
+  position: absolute;
+  background-color: rgb(194, 169, 136);
+  width: 300px;
+  height: 175px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  color: black;
+  border-radius: 10px;
+}
+
+.about-header {
+  color: rgb(229, 208, 18);
+  font-size: 1.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  padding-bottom: 5px;
+}
+
+
 
 
 

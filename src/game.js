@@ -31,20 +31,18 @@ export default class NumWarrior {
   }
 
   start() {
-
     this.audio.startBgm();
-    
     this.run();
   }
   
   run(c) {
     if (this.status === 'running') {
-      this.frameCount += 1;
+      // this.frameCount += 1;
       
-      if (this.frameCount < 2) {
-        requestAnimationFrame(this.run);
-        return
-      }
+      // if (this.frameCount < 2) {
+      //   requestAnimationFrame(this.run);
+      //   return
+      // }
       
       this.frameCount = 0;
       this.context.clearRect(0,0, this.dimensions.width, this.dimensions.height);
@@ -56,7 +54,7 @@ export default class NumWarrior {
       this.registerListeners();
     
       requestAnimationFrame(this.run);
-  }
+    }
   }
   
 
