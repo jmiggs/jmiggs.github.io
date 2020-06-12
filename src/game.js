@@ -78,7 +78,7 @@ export default class NumWarrior {
       if (this.minute === `1` && this.seconds === `00`) {
         
         this.minute = `0`;
-        this.seconds = `1`;
+        this.seconds = `59`;
       } else {
 
         if (this.seconds <= `10`) {
