@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (game.status === 'done') {
 
-        document.getElementById('enter').style.display = 'none';
+        document.getElementById('enter2').style.display = 'none';
         game = new NumWarrior(canvas);
 
         game.status = 'running';

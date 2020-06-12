@@ -33,6 +33,34 @@ body {
   z-index: 3;
 }
 
+#enter2 {
+  position: absolute;
+  height: 75px;
+
+  color: white;
+
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  /* font-family: '8BITWONDERNominal'; */
+  justify-content: center;
+  z-index: 3;
+  display: none;
+  align-items: center;
+
+}
+
+#retreat {
+  width:300px;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+#again {
+  font-size: 1.2em;
+  width:300px;
+  text-align: center;
+}
+
 .numtitle {
   padding-bottom: 50px; 
   padding-top: 30px;

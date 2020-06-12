@@ -37,12 +37,12 @@ export default class NumWarrior {
   
   run(c) {
     if (this.status === 'running') {
-      // this.frameCount += 1;
+      this.frameCount += 1;
       
-      // if (this.frameCount < 2) {
-      //   requestAnimationFrame(this.run);
-      //   return
-      // }
+      if (this.frameCount < 2) {
+        requestAnimationFrame(this.run);
+        return
+      }
       
       this.frameCount = 0;
       this.context.clearRect(0,0, this.dimensions.width, this.dimensions.height);
@@ -78,7 +78,7 @@ export default class NumWarrior {
       if (this.minute === `1` && this.seconds === `00`) {
         
         this.minute = `0`;
-        this.seconds = `59`;
+        this.seconds = `1`;
       } else {
 
         if (this.seconds <= `10`) {
@@ -104,6 +104,7 @@ export default class NumWarrior {
       this.context.clearRect(0,0, this.dimensions.width, this.dimensions.height);
       this.board.drawBackground(this.context)
       this.board.drawBoard(this.context);
+
     }
   }
   
@@ -122,7 +123,7 @@ export default class NumWarrior {
 
     window.removeEventListener('keydown', this.handleKeyDown.bind(this));
     this.audio.removeListeners();
-    document.getElementById('enter').style.display = 'block';
+    document.getElementById('enter2').style.display = 'block';
 
 
 
