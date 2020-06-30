@@ -1,6 +1,6 @@
 # NumWarrior
 
-Do you feel like typing out numbers is troublesome or not as easy as typing words?? Here's a way to get better at doing that!
+Do you feel like typing out numbers is troublesome or not as easy as typing words?? Here's a way to get better at doing that!!
 
 ## Background
 NumWarriors is a game where users can practice their speed and efficiency with a 10key numpad, in a fun way! The game is played on a grid,
