@@ -147,6 +147,8 @@ This Objective Controller class generates all pigs on the board, and calls on ea
 As an Objective is created randomly on the board, the Objective Controller keeps track of that objective's existence by storing it's position in its state. It also gives the Board the objective's positiion so that the Board can keep track of which tiles has an objective.
 
 As each objective is captured, the objective's position is removed from the Objective Controllers state (and also the Board's), thus shrinking the amount of objectives its keeping track of. Once the amount of pigs reaches an amount of 1, ``generatePigs()`` is called to spawn even more pigs!!
+
+
 ![alt text](https://i.imgur.com/8z3NeJq.gif)
 
 
