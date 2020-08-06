@@ -56,7 +56,6 @@ export default class AudioController {
     mute.addEventListener('click', () => {
       this.bgm.muted = true;
       this.muted = true;
-
     })
 
   }
